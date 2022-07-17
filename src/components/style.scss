@@ -1,0 +1,149 @@
+$primaryColor: #25a5f7;
+$barHeight: 50%;
+$btnBottom: 50%;
+.hide {
+  display: none;
+}
+.map-container {
+  position: relative;
+  height: 100%;
+
+  .header {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: rgb(29, 33, 40);
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 0 18px;
+    color: #fff;
+    .title {
+      font-size: 16px;
+      float: left;
+    }
+    .margin-left-5 {
+      margin-left: 5px;
+    }
+    .select-date {
+      float: left;
+      display: flex;
+      margin-left: 30px;
+      margin-top: 1px;
+      .ant-calendar-picker {
+        width: 110px;
+        margin-left: 20px;
+      }
+    }
+    .btn-ground {
+      margin-left: 50px;
+      float: left;
+    }
+    .totals {
+      float: right;
+      span {
+        color: red;
+      }
+    }
+  }
+}
+
+.ngxmap {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.bar-chart {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  z-index: 999;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.show-box {
+  height: $barHeight;
+  animation: showBarAnimation 300ms ease-out;
+}
+
+.hide-box {
+  height: 0;
+  animation: hideBarAnimation 300ms ease-out;
+}
+
+@keyframes showBarAnimation {
+  from {
+    height: 0;
+  }
+  to {
+    height: $barHeight;
+  }
+}
+
+@keyframes hideBarAnimation {
+  from {
+    height: $barHeight;
+  }
+  to {
+    height: 0;
+  }
+}
+
+.switch-btn {
+  width: 100px;
+  height: 16px;
+  line-height: 0px;
+  background: #ee7f25;
+  position: absolute;
+  // bottom: 50%; // 初始化showBox === true =>>> 50% ,否则 0
+  z-index: 999;
+  margin: 0 calc(50% - 50px);
+  border-radius: 4px 4px 0 0px;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  .anticon {
+    vertical-align: 0;
+  }
+}
+
+.btn-up-site {
+  bottom: $btnBottom;
+  animation: upBtn 300ms ease-out;
+}
+
+.btn-down-site {
+  bottom: 0;
+  animation: downBtn 300ms ease-out;
+}
+
+@keyframes downBtn {
+  from {
+    bottom: $btnBottom;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes upBtn {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: $btnBottom;
+  }
+}
+
+.amap-ui-district-cluster-marker.level_province
+  .amap-ui-district-cluster-marker-body {
+  display: initial;
+}
+.amap-ui-district-cluster-marker span {
+  box-sizing: content-box;
+}
+.amap-ui-district-cluster-marker {
+  height: 24px;
+}
