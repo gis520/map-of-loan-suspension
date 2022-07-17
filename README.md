@@ -8,7 +8,7 @@
 
 在线 demo 预览：https://map-of-loan-suspension.vercel.app
 
-![](public/demo.jpg)
+![](src/assets/demo.jpg)
 
 ## Usage
 
