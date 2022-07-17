@@ -20,3 +20,5 @@ node 版本建议 `v14`，避免 node-sass 乱报错
 ## 声明
 
 本 demo 仅供学习使用，数据都来自网络，不代表真实情况。
+
+- [《WebGIS 入门实战》](https://xiaozhuanlan.com/webgis)
