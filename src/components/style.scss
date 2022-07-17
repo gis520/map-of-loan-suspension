@@ -40,6 +40,7 @@ $btnBottom: 50%;
     }
     .totals {
       float: right;
+      display: flex;
       span {
         color: red;
       }
